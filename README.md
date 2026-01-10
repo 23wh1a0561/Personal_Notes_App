@@ -4,7 +4,7 @@ The Personal Notes App allows users to securely create, manage, and organize the
 # User Roles
 Regular User
 Can create, view, edit, and delete only their own notes
-# Admin
+Admin
 Can manage all users’ notes
 Can perform CRUD operations on user accounts
 
