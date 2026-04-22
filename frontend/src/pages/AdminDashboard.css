@@ -1,0 +1,256 @@
+.admin-dashboard-page {
+  min-height: 100vh;
+  padding: 32px 20px;
+  background:
+    radial-gradient(circle at top left, rgba(101, 166, 255, 0.32), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(0, 224, 193, 0.22), transparent 28%),
+    linear-gradient(135deg, #071726 0%, #0d2236 45%, #12304a 100%);
+}
+
+.admin-dashboard-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.glass-panel,
+.glass-card {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.admin-dashboard-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 28px;
+  border-radius: 28px;
+  color: #f7fbff;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #8fe7d5;
+}
+
+.admin-dashboard-hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1;
+}
+
+.hero-copy {
+  max-width: 520px;
+  margin: 14px 0 0;
+  color: rgba(247, 251, 255, 0.8);
+}
+
+.logout-btn,
+.action-btn {
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+}
+
+.logout-btn:hover,
+.action-btn:hover {
+  transform: translateY(-1px);
+}
+
+.logout-btn:disabled,
+.action-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
+}
+
+.logout-btn {
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #f7fbff;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin: 22px 0;
+}
+
+.stat-card {
+  padding: 22px;
+  border-radius: 22px;
+  color: #f7fbff;
+}
+
+.stat-card span {
+  display: block;
+  font-size: 0.92rem;
+  color: rgba(247, 251, 255, 0.72);
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 2rem;
+}
+
+.users-panel {
+  padding: 24px;
+  border-radius: 28px;
+  color: #f7fbff;
+}
+
+.users-panel-header {
+  margin-bottom: 18px;
+}
+
+.users-panel-header h2 {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+}
+
+.users-panel-header p,
+.status-text {
+  margin: 0;
+  color: rgba(247, 251, 255, 0.74);
+}
+
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.user-card {
+  padding: 22px;
+  border-radius: 22px;
+  color: #f7fbff;
+}
+
+.user-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.user-card h3 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+}
+
+.user-card p {
+  margin: 0;
+  color: rgba(247, 251, 255, 0.72);
+}
+
+.role-pill {
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.role-pill.admin {
+  background: rgba(255, 191, 71, 0.2);
+  color: #ffd56a;
+}
+
+.role-pill.user {
+  background: rgba(143, 231, 213, 0.16);
+  color: #8fe7d5;
+}
+
+.user-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.user-metrics div {
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.user-metrics span {
+  display: block;
+  font-size: 0.78rem;
+  color: rgba(247, 251, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.user-metrics strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+
+.user-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 14px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.block-btn {
+  background: linear-gradient(135deg, #ffcc56, #ff8f3c);
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #ff6b6b, #d7263d);
+}
+
+.self-note {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #ffd56a;
+}
+
+@media (max-width: 900px) {
+  .stats-grid,
+  .users-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-dashboard-page {
+    padding: 20px 14px;
+  }
+
+  .admin-dashboard-hero,
+  .user-card-top,
+  .user-actions {
+    flex-direction: column;
+  }
+
+  .stats-grid,
+  .users-grid,
+  .user-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .logout-btn,
+  .action-btn {
+    width: 100%;
+  }
+}
